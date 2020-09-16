@@ -126,10 +126,18 @@ Baby.prototype.play = function () {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+
+   1. In a regular function call, this refers to the default global object
+    (which would make 'this' undefined when the document uses 'strict' mode).
+  
+   2. When called within an object, this can reference other values in the object
+    (A Person object 'greet' method can get 'this.name', for example).
+  
+   3. When using apply, call, or bind to call the object, we can point to a specific method or value of the object
+    (creating a permanent 'this' reference in the case of 'bind').
+  
+   4. When called within a new construct of a object, this points to the specific new object
+   (A new instance of person has a specific name of 'mike', which this would point to).
 */
 
 ///////// END OF CHALLENGE /////////
